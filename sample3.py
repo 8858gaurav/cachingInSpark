@@ -164,7 +164,7 @@ spark.sql("select count(distinct order_id ) from itv020752_db_new.caching_demo")
 # Locality Level = PROCESS_LOCAL
 # host = w02.itversity.com
 
-#  it'll show you a process_local in the first stage, ## means heading, open stageId = 20 link, you'll see 200 records
+#  it'll show you a process_local in the second stage, ## means heading, open stageId = 20 link, you'll see 200 records
 ## Tasks (1)
 # Status = SUCCESS
 # Locality Level = PROCESS_LOCAL OR NODE_LOCAL
@@ -172,7 +172,7 @@ spark.sql("select count(distinct order_id ) from itv020752_db_new.caching_demo")
 # Shuffle write size / records = 56B/1 # for PROCESS_LOCAL, only Shuffle write size / records is there
 # Shuffle read size / records = some_value, Shuffle write size / records = some_value, for NODE_LOCAL
 
-#  it'll show you a process_local in the first stage, ## means heading, open stageId = 21 link
+#  it'll show you a process_local in the third stage, ## means heading, open stageId = 21 link
 ## Tasks (1)
 # Status = SUCCESS
 # Locality Level = NODE_LOCAL
