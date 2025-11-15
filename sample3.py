@@ -202,3 +202,12 @@ spark.sql("select order_status, count(*) from itv020752_db_new.caching_demo grou
 
 # if we run the same line again, then it will hit the cache, it will show you a process_local.
 spark.sql("select order_status, count(*) from itv020752_db_new.caching_demo group by 1").show()
+
+process local while reading the cache data is ; ➡️ Same machine, same executor, same process.
+
+node local while reading the cache data is : ➡️ Same machine, but different process or source.
+
+Node-local does NOT involve multiple nodes.
+It means the task and the data are on the same node.
+
+Process-local also uses only one machine (even stricter: one JVM process).
