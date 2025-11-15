@@ -68,5 +68,5 @@ if __name__ == '__main__':
    # but when we deal with adding or removing files in backend, then spark can't track it, and we have to refresh the table manually. 
 
    # insert command will work for managed and ext spark tables both
-   # but placing a files will work for only ext tables. 
-   # in managed table, we can't place the files manually, since managed table data is handeled by the Hive.
+   # but placing a files will also work for both managed , and ext tables. 
+   # in managed table, we can place the files manually, since managed table data is handeled by the Hive.
