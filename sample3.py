@@ -211,3 +211,21 @@ Node-local does NOT involve multiple nodes.
 It means the task and the data are on the same node.
 
 Process-local also uses only one machine (even stricter: one JVM process).
+
+Data is in the same JVM process where the task is running.
+
+Example: process local 
+You cached an RDD/DataFrame partition in memory on an executor, and Spark schedules the next task on the same executor + same JVM process.
+
+example: node local 
+Slightly slower than process-local.
+
+Data is on the same machine, but in a different process.
+
+Example:
+
+The data might be in HDFS block on same node
+
+Or another executor’s memory on same node
+
+Or another JVM (like an external shuffle service)
